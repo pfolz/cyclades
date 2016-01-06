@@ -1,0 +1,16 @@
+set terminal png transparent size 450,320 font "arial,8" 
+set output 'res2bsbm.png'
+#black = #000000
+#set border 3 front lt black linewidth 1.000 dashtype solid
+set style line 2 lc rgb 'black' lt 1 lw 1
+set key invert reverse Left outside
+set key autotitle columnheader
+set style data histogram
+set style histogram rowstacked
+set style fill solid border -1
+set boxwidth 0.75
+set xtics border in scale 0,0 nomirror rotate by -45  autojustify
+set ylabel "% total Calls"
+set yrange [ 0.00000 : 100.000 ] noreverse nowriteback
+
+plot 'res2bsbm.dat' using 2:xtic(1) title '% @local ' lc rgbcolor "black" lt 1 fs pattern 6, '' using 3 title '% @neighbors' lc rgbcolor "black" lt 1 fs pattern 5, '' using 4 title '% @LDF server' lc rgbcolor "black" lt 1 fs pattern 2

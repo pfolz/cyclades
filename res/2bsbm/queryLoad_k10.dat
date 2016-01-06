@@ -1,0 +1,5 @@
+"nb queries < 10000" 100	0	0	
+"nb queries < 10000" 100	0	0	
+"10000 < nb queries < 100000" 0	67	0	
+"nb queries > 100000"	0	0	32	
+
